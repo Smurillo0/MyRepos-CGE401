@@ -10,6 +10,11 @@ public class PlayerPlatformerController : PhysicsObject {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    public bool gameOver = false;
+
+    
+
+
     // Use this for initialization
     void Awake () 
     {
@@ -22,7 +27,8 @@ public class PlayerPlatformerController : PhysicsObject {
         Vector2 move = Vector2.zero;
 
         move.x = Input.GetAxis ("Horizontal");
-
+        
+        
         if (Input.GetButtonDown ("Jump") && grounded) {
             velocity.y = jumpTakeOffSpeed;
         } else if (Input.GetButtonUp ("Jump")) 
@@ -53,4 +59,7 @@ public class PlayerPlatformerController : PhysicsObject {
 
         targetVelocity = move * maxSpeed;
     }
+
+
+
 }
