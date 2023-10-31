@@ -6,6 +6,9 @@ TagManager:
   tags:
   - CinemachineTarget
   - DisplayScoreText
+  - ScoreText
+  - EndZone
+  - YouWin
   layers:
   - Default
   - TransparentFX
