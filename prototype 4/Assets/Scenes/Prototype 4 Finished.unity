@@ -328,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1887969965315444, guid: 1656aec7f2b3ffe45a91801f58b00253, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4740640696147648, guid: 1656aec7f2b3ffe45a91801f58b00253, type: 3}
       propertyPath: m_LocalPosition.x
@@ -710,6 +710,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6060124481815129589, guid: e68f1fcb8beaa5840a4f902c7fa1e0d1,
     type: 3}
+  powerupPrefab: {fileID: 5323409528798439857, guid: 1b35fcecd0c51e047858784c054d4ae5,
+    type: 3}
+  enemyCount: 0
+  waveNumber: 1
 --- !u!4 &2092422789
 Transform:
   m_ObjectHideFlags: 0

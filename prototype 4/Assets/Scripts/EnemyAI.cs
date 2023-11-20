@@ -23,7 +23,16 @@ public class EnemyAI : MonoBehaviour
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
 
         // add force toward player
+
         enemyRb.AddForce(lookDirection * speed);
+
+        //destroy object when it falls off the edge of the surface
+
+        if(transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
+
     }
 
 
