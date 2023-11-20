@@ -55,7 +55,7 @@ public class ScoreScript : MonoBehaviour
 
         if(score >= 10)
         {
-            playerController.gameO = true;
+            playerController.gameO = false;
             won = true;
 
             //scoreText.text = "You Win!" + "\n" + "Press R to Try Again";
