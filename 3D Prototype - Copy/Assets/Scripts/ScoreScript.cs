@@ -35,7 +35,7 @@ public class ScoreScript : MonoBehaviour
             playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>();
         }
 
-        scoreText.text = "Score: 0";
+      //  scoreText.text = "Score: 0";
 
 
     }
