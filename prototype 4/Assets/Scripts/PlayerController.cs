@@ -50,6 +50,8 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(PowerupCountdownRoutine());
 
+          
+
             //when player collides with powerIndicator, it is trigegred - true
             powerupIndicator.SetActive(true);
         }
@@ -72,9 +74,11 @@ public class PlayerController : MonoBehaviour
             Rigidbody enemyRigidBody = collision.gameObject.GetComponent<Rigidbody>();
 
             //set a Vector3 with a direction away from thr player 
+            //Vector3 awayFromPlayer = (collision.gameObject.transform.position - transform.position).normalized;
             Vector3 awayFromPlayer = (collision.gameObject.transform.position - transform.position).normalized;
 
-            //add forcce away from player 
+
+            //add force away from player 
             enemyRigidBody.AddForce(awayFromPlayer * powerUpStrength, ForceMode.Impulse);
 
         }

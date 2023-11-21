@@ -12,6 +12,8 @@ public class SpawnManager : MonoBehaviour
     public int waveNumber = 1;
 
 
+    private PlayerController playerController;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,9 @@ public class SpawnManager : MonoBehaviour
 
         //generate powerups at start of the game 
         SpawnPowerup(1);
+
+        //setting an instance of the object
+        playerController = GetComponent<PlayerController>();
 
     }
 
@@ -57,13 +62,19 @@ public class SpawnManager : MonoBehaviour
         // using plural FindGameObjectsWithTag()
         enemyCount = GameObject.FindGameObjectsWithTag("Enemy").Length;
 
-        if(enemyCount == 0 )
+        if(enemyCount == 0  )
         {
             //proceed to the next wave and start spawning enemies
             waveNumber++;
             SpawnEnemyWave(waveNumber);
             SpawnPowerup(1);
 
+        }
+        
+        if (playerController.hasPowerUp)
+        {
+            waveNumber++;
+            SpawnEnemyWave(waveNumber);
         }
     }
 
